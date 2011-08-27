@@ -14,32 +14,7 @@
 <body>
 	<div class="wrapper">
 		<div class="inner">
-			<h1><?php echo CHtml::encode($this->pageTitle); ?></h1>
-			<form class="form search" action="">
-				<input tipe="text" name="who" />
-				<input tipe="text" name="radius" />
-				<input type="submit" value="search" />
-			</form>
-			<div class="map" id="map_canvas"></div>
 			<?php echo $content; ?>
-			<div class="sidebar">
-				<div class="block">
-					<h2>Timeline</h2>
-					<div class="block-inner">
-						<ul>
-							<li></li>
-						</ul>
-					</div>
-				</div>
-				<div class="block">
-					<h2>Self</h2>
-					<div class="block-inner">
-						<ul>
-							<li></li>
-						</ul>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </body>

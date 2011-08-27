@@ -2,7 +2,23 @@ $(function() {
 	var map
 	var geocoder
 	loadScript()
+	autoComplit()
+	
 })
+
+function autoComplit(){
+	$('#search').submit(function(){return false})
+
+	var who = $('#who')
+
+	who.keypress(function(){
+		var value = $(this).val()
+		if(value.length > 2){
+			console.log(value)
+		}
+	})
+	
+}
 
 // http://maps.google.com/?ll=54.853885,83.125134&spn=0.059489,0.154324&z=13&vpsrc=6
 function initialize() {
