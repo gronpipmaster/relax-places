@@ -11,7 +11,7 @@
  * @property string $creat_date
  * @property string $params
  */
-class users extends CActiveRecord
+class Users extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.

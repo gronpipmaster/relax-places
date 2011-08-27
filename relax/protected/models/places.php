@@ -12,7 +12,7 @@
  * @property string $lon
  * @property string $lat
  */
-class places extends CActiveRecord
+class Places extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
