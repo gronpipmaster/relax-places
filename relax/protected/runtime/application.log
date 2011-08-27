@@ -538,3 +538,127 @@ Stack trace:
 #11 /Users/wdevil/relax_places/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
 #12 /Users/wdevil/relax_places/relax-places/relax/index.php(13): CApplication->run()
 #13 {main} REQUEST_URI=/relax/index.php?r=app/index
+2011/08/27 19:51:49 [error] [exception.CException] exception 'CException' with message 'WebApi and its behaviors do not have a method or closure named "init".' in /Users/wdevil/relax_places/relax-places/framework/base/CComponent.php:269
+Stack trace:
+#0 /Users/wdevil/relax_places/relax-places/framework/base/CModule.php(372): CComponent->__call('init', Array)
+#1 /Users/wdevil/relax_places/relax-places/framework/base/CModule.php(372): WebApi->init()
+#2 /Users/wdevil/relax_places/relax-places/framework/base/CModule.php(86): CModule->getComponent('webapi')
+#3 /Users/wdevil/relax_places/relax-places/relax/protected/controllers/AppController.php(9): CModule->__get('webapi')
+#4 /Users/wdevil/relax_places/relax-places/framework/web/actions/CInlineAction.php(50): AppController->actionIndex()
+#5 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#6 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#7 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(277): CController->run('index')
+#9 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('app/index')
+#10 /Users/wdevil/relax_places/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#11 /Users/wdevil/relax_places/relax-places/relax/index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/relax/index.php?r=app/index
+2011/08/27 20:27:23 [error] [php] Undefined variable: action (/Users/wdevil/relax_places/relax-places/relax/protected/components/WebApi.php:11)
+Stack trace:
+#0 /Users/wdevil/relax_places/relax-places/relax/protected/controllers/AppController.php(9): CWebApplication->__get()
+#1 /Users/wdevil/relax_places/relax-places/framework/web/actions/CInlineAction.php(50): AppController->actionIndex()
+#2 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(278): AppController->runAction()
+#4 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(257): AppController->runActionWithFilters()
+#5 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(277): AppController->run()
+#6 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#7 /Users/wdevil/relax_places/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#8 /Users/wdevil/relax_places/relax-places/relax/index.php(13): CWebApplication->run()
+REQUEST_URI=/relax/index.php?r=app/index
+in /Users/wdevil/relax_places/relax-places/relax/protected/components/WebApi.php (11)
+in /Users/wdevil/relax_places/relax-places/relax/protected/controllers/AppController.php (9)
+in /Users/wdevil/relax_places/relax-places/relax/index.php (13)
+2011/08/27 20:45:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getFirms?what=РЅРѕРІРѕ".' in /Users/wdevil/relax_places/relax-places/framework/web/CController.php:477
+Stack trace:
+#0 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(262): CController->missingAction('getFirms?what=?...')
+#1 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(277): CController->run('getFirms?what=?...')
+#2 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('app/getFirms?wh...')
+#3 /Users/wdevil/relax_places/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /Users/wdevil/relax_places/relax-places/relax/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/relax/index.php?r=app/getFirms?what=%D0%BD%D0%BE%D0%B2%D0%BE
+2011/08/27 20:45:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getFirms.what=РЅРѕРІРѕ".' in /Users/wdevil/relax_places/relax-places/framework/web/CController.php:477
+Stack trace:
+#0 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(262): CController->missingAction('getFirms.what=?...')
+#1 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(277): CController->run('getFirms.what=?...')
+#2 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('app/getFirms.wh...')
+#3 /Users/wdevil/relax_places/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /Users/wdevil/relax_places/relax-places/relax/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/relax/index.php?r=app/getFirms.what=%D0%BD%D0%BE%D0%B2%D0%BE
+2011/08/27 20:45:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getFirms".' in /Users/wdevil/relax_places/relax-places/framework/web/CController.php:477
+Stack trace:
+#0 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(262): CController->missingAction('getFirms')
+#1 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(277): CController->run('getFirms')
+#2 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('app/getFirms')
+#3 /Users/wdevil/relax_places/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /Users/wdevil/relax_places/relax-places/relax/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/relax/index.php?r=app/getFirms&what=%D0%BD%D0%BE%D0%B2%D0%BE
+2011/08/27 20:45:36 [error] [exception.CException] exception 'CException' with message 'Property "WebApi.api_url" is not defined.' in /Users/wdevil/relax_places/relax-places/framework/base/CComponent.php:174
+Stack trace:
+#0 /Users/wdevil/relax_places/relax-places/framework/YiiBase.php(225): CComponent->__set('api_url', 'http://catalog....')
+#1 /Users/wdevil/relax_places/relax-places/framework/base/CModule.php(371): YiiBase::createComponent(Array)
+#2 /Users/wdevil/relax_places/relax-places/framework/base/CModule.php(86): CModule->getComponent('webapi')
+#3 /Users/wdevil/relax_places/relax-places/relax/protected/controllers/AppController.php(11): CModule->__get('webapi')
+#4 [internal function]: AppController->actionGetFilials('????????')
+#5 /Users/wdevil/relax_places/relax-places/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs(Object(AppController), Array)
+#6 /Users/wdevil/relax_places/relax-places/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(AppController), Object(ReflectionMethod), Array)
+#7 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#8 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#9 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(277): CController->run('getFilials')
+#11 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('app/getFilials')
+#12 /Users/wdevil/relax_places/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#13 /Users/wdevil/relax_places/relax-places/relax/index.php(13): CApplication->run()
+#14 {main} REQUEST_URI=/relax/index.php?r=app/getFilials&what=%D0%BD%D0%BE%D0%B2%D0%BE
+2011/08/27 20:45:57 [error] [exception.CException] exception 'CException' with message 'Property "WebApi.api_url" is not defined.' in /Users/wdevil/relax_places/relax-places/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/wdevil/relax_places/relax-places/relax/protected/components/WebApi.php(23): CComponent->__get('api_url')
+#1 /Users/wdevil/relax_places/relax-places/relax/protected/components/WebApi.php(18): WebApi->buildReqUrl('search', Array)
+#2 /Users/wdevil/relax_places/relax-places/relax/protected/components/WebApi.php(14): WebApi->sendRequest('search', Array)
+#3 /Users/wdevil/relax_places/relax-places/relax/protected/controllers/AppController.php(11): WebApi->getFirmsByName('????????', '???????????')
+#4 [internal function]: AppController->actionGetFilials('????????')
+#5 /Users/wdevil/relax_places/relax-places/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs(Object(AppController), Array)
+#6 /Users/wdevil/relax_places/relax-places/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(AppController), Object(ReflectionMethod), Array)
+#7 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#8 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#9 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(277): CController->run('getFilials')
+#11 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('app/getFilials')
+#12 /Users/wdevil/relax_places/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#13 /Users/wdevil/relax_places/relax-places/relax/index.php(13): CApplication->run()
+#14 {main} REQUEST_URI=/relax/index.php?r=app/getFilials&what=%D0%BD%D0%BE%D0%B2%D0%BE
+2011/08/27 20:46:14 [error] [php] file_get_contents(http://catalog.api.2gis.ru/search?key=rufjco2083&amp;version=1.3&amp;what=РЅРѕРІРѕ&amp;where=Новосибирск) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ (/Users/wdevil/relax_places/relax-places/relax/protected/components/WebApi.php:19)
+Stack trace:
+#0 /Users/wdevil/relax_places/relax-places/relax/protected/controllers/AppController.php(11): WebApi->getFirmsByName()
+#1 unknown(0): AppController->actionGetFilials()
+#2 /Users/wdevil/relax_places/relax-places/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs()
+#3 /Users/wdevil/relax_places/relax-places/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(300): CInlineAction->runWithParams()
+#5 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(278): AppController->runAction()
+#6 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(257): AppController->runActionWithFilters()
+#7 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(277): AppController->run()
+#8 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#9 /Users/wdevil/relax_places/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /Users/wdevil/relax_places/relax-places/relax/index.php(13): CWebApplication->run()
+REQUEST_URI=/relax/index.php?r=app/getFilials&what=%D0%BD%D0%BE%D0%B2%D0%BE
+in /Users/wdevil/relax_places/relax-places/relax/protected/components/WebApi.php (19)
+in /Users/wdevil/relax_places/relax-places/relax/protected/components/WebApi.php (14)
+in /Users/wdevil/relax_places/relax-places/relax/protected/controllers/AppController.php (11)
+2011/08/27 20:46:42 [error] [php] file_get_contents(http://catalog.api.2gis.ru/search?key=rufjco2083&amp;version=1.3&amp;what=РЅРѕРІРѕ&amp;where=Новосибирск) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ (/Users/wdevil/relax_places/relax-places/relax/protected/components/WebApi.php:19)
+Stack trace:
+#0 /Users/wdevil/relax_places/relax-places/relax/protected/controllers/AppController.php(11): WebApi->getFirmsByName()
+#1 unknown(0): AppController->actionGetFilials()
+#2 /Users/wdevil/relax_places/relax-places/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs()
+#3 /Users/wdevil/relax_places/relax-places/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(300): CInlineAction->runWithParams()
+#5 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(278): AppController->runAction()
+#6 /Users/wdevil/relax_places/relax-places/framework/web/CController.php(257): AppController->runActionWithFilters()
+#7 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(277): AppController->run()
+#8 /Users/wdevil/relax_places/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#9 /Users/wdevil/relax_places/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#10 /Users/wdevil/relax_places/relax-places/relax/index.php(13): CWebApplication->run()
+REQUEST_URI=/relax/index.php?r=app/getFilials&what=%D0%BD%D0%BE%D0%B2%D0%BE
+in /Users/wdevil/relax_places/relax-places/relax/protected/components/WebApi.php (19)
+in /Users/wdevil/relax_places/relax-places/relax/protected/components/WebApi.php (14)
+in /Users/wdevil/relax_places/relax-places/relax/protected/controllers/AppController.php (11)

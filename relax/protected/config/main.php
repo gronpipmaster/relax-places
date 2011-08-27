@@ -63,6 +63,12 @@ return array(
 			// use 'site/error' action to display errors
             'errorAction'=>'site/error',
         ),
+        'webapi' => array(
+            'class' => 'WebApi',
+            'apiUrl' => 'http://catalog.api.2gis.ru',
+            'apiKey' => 'rufjco2083',
+            'version' => '1.3'
+        ),
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
@@ -85,5 +91,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+        'defaultLocation' => 'Новосибирск'
 	),
 );

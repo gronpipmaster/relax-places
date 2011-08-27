@@ -4,9 +4,12 @@ class AppController extends Controller
 {
 	public function actionIndex()
 	{
-        Yii::app()->db;
 		$this->render('index');
 	}
+
+    public function actionGetFilials($what) {
+        var_dump(Yii::app()->webapi->getFirmsByName($what, Yii::app()->params['defaultLocation']));
+    }
 
 	// -----------------------------------------------------------
 	// Uncomment the following methods and override them if needed
