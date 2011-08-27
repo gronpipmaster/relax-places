@@ -10,6 +10,6 @@ body{font-family:ubuntu, arial;font-size:14px;height: 100%;}
 
 .wrapper .inner .sidebar{float:right;width:300px;}
 
-.wrapper .inner .block{}
+.wrapper .inner .block{} 
 .wrapper .inner .block h2{}
 .wrapper .inner .block .block-inner{}
