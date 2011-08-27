@@ -6,15 +6,29 @@ $(function() {
 	
 })
 
+function processJson(data){
+	console.log(data)
+}
+
 function autoComplit(){
-	$('#search').submit(function(){return false})
+// 	$('#search')
+	var form = $('#search')
+	var what = $('#what')
 
-	var who = $('#who')
 
-	who.keypress(function(){
+// 	form.submit(function(){return false})
+	what.keypress(function(){
 		var value = $(this).val()
 		if(value.length > 2){
 			console.log(value)
+			form.ajaxForm({
+// 				target:        '#output',
+				// dataType identifies the expected content type of the server response
+// 				dataType:  'json',
+				// success identifies the function to invoke when the server response
+				// has been received
+				success:   processJson
+			}) 
 		}
 	})
 	
