@@ -8,34 +8,11 @@ class AppController extends Controller
 	}
 
     public function actionGetFilials($what) {
-        var_dump(Yii::app()->webapi->getFirmsByName($what, Yii::app()->params['defaultLocation']));
+        $filials = Yii::app()->webapi->getFirmsByName($what, Yii::app()->params['defaultLocation']);
+        $this->layout = false;
+        header('Content-type: application/json');
+        echo CJavaScript::jsonEncode($filials);
+        Yii::app()->end();
     }
 
-	// -----------------------------------------------------------
-	// Uncomment the following methods and override them if needed
-	/*
-	public function filters()
-	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
-
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
-	*/
 }
