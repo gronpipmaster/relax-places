@@ -76,6 +76,12 @@ class Places extends CActiveRecord
 		);
 	}
 
+    public function searchNearBy($lon, $lat, $radius) {
+        $sql = 'SELECT ((ACOS(SIN('. $lat .' * PI() / 180) * SIN(lat * PI() / 180) + COS(' . $lat . ' * PI() / 180) * COS(lat * PI() / 180) * COS((' . $lon . ' - lon) * PI() / 180)) * 180 / PI()) * 60 * 1.1515) AS `distance` FROM `'. $this->tableName() .'` HAVING `distance`<=' . $radius . ' ORDER BY `distance` ASC';
+        return $this->dbConnection->createCommand($sql)->queryAll();
+    }
+
+
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.

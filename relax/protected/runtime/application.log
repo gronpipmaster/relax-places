@@ -594,3 +594,118 @@ Stack trace:
 #3 /Users/wdevil/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
 #4 /Users/wdevil/relax-places/relax/index.php(13): CApplication->run()
 #5 {main} REQUEST_URI=/relax/index.php?r=app/getFilials&what=%D0%BD%D0%BE%D0%B2%D0%BE
+2011/08/28 13:49:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/wdevil/relax-places/framework/web/CController.php:328
+Stack trace:
+#0 /Users/wdevil/relax-places/framework/web/CController.php(301): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/wdevil/relax-places/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#2 /Users/wdevil/relax-places/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/wdevil/relax-places/framework/web/CWebApplication.php(277): CController->run('addPlace')
+#4 /Users/wdevil/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('places/addPlace')
+#5 /Users/wdevil/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#6 /Users/wdevil/relax-places/relax/index.php(13): CApplication->run()
+#7 {main} REQUEST_URI=/relax/index.php?r=places/addPlace&tittle=%D0%BD%D0%BE%D0%B2%D0%BE&description=desc&lon=1&lat=2
+2011/08/28 13:49:51 [error] [exception.CException] exception 'CException' with message 'Property "Places.description" is not defined.' in /Users/wdevil/relax-places/framework/base/CComponent.php:174
+Stack trace:
+#0 /Users/wdevil/relax-places/framework/db/ar/CActiveRecord.php(145): CComponent->__set('description', 'desc')
+#1 /Users/wdevil/relax-places/relax/protected/controllers/PlacesController.php(21): CActiveRecord->__set('description', 'desc')
+#2 [internal function]: PlacesController->actionAddPlace('????????', 'desc', '1', '2')
+#3 /Users/wdevil/relax-places/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs(Object(PlacesController), Array)
+#4 /Users/wdevil/relax-places/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PlacesController), Object(ReflectionMethod), Array)
+#5 /Users/wdevil/relax-places/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#6 /Users/wdevil/relax-places/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#7 /Users/wdevil/relax-places/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/wdevil/relax-places/framework/web/CWebApplication.php(277): CController->run('addPlace')
+#9 /Users/wdevil/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('places/addPlace')
+#10 /Users/wdevil/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#11 /Users/wdevil/relax-places/relax/index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/relax/index.php?r=places/addPlace&title=%D0%BD%D0%BE%D0%B2%D0%BE&description=desc&lon=1&lat=2
+2011/08/28 13:53:23 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/wdevil/relax-places/framework/web/CController.php:328
+Stack trace:
+#0 /Users/wdevil/relax-places/framework/web/CController.php(301): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/wdevil/relax-places/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#2 /Users/wdevil/relax-places/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/wdevil/relax-places/framework/web/CWebApplication.php(277): CController->run('addPlace')
+#4 /Users/wdevil/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('places/addPlace')
+#5 /Users/wdevil/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#6 /Users/wdevil/relax-places/relax/index.php(13): CApplication->run()
+#7 {main} REQUEST_URI=/relax/index.php?r=places/addPlace&title=%D0%BD%D0%BE%D0%B2%D0%BE&description=desc&lon=1&lat=2
+2011/08/28 13:53:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/wdevil/relax-places/framework/web/CController.php:328
+Stack trace:
+#0 /Users/wdevil/relax-places/framework/web/CController.php(301): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/wdevil/relax-places/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#2 /Users/wdevil/relax-places/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/wdevil/relax-places/framework/web/CWebApplication.php(277): CController->run('addPlace')
+#4 /Users/wdevil/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('places/addPlace')
+#5 /Users/wdevil/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#6 /Users/wdevil/relax-places/relax/index.php(13): CApplication->run()
+#7 {main} REQUEST_URI=/relax/index.php?r=places/addPlace&title=%D0%BD%D0%BE%D0%B2%D0%BE&description=desc&lon=1&lat=2
+2011/08/28 13:53:47 [error] [php] date() expects at least 1 parameter, 0 given (/Users/wdevil/relax-places/relax/protected/controllers/PlacesController.php:25)
+Stack trace:
+#0 /Users/wdevil/relax-places/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs()
+#1 /Users/wdevil/relax-places/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /Users/wdevil/relax-places/framework/web/CController.php(300): CInlineAction->runWithParams()
+#3 /Users/wdevil/relax-places/framework/web/CController.php(278): PlacesController->runAction()
+#4 /Users/wdevil/relax-places/framework/web/CController.php(257): PlacesController->runActionWithFilters()
+#5 /Users/wdevil/relax-places/framework/web/CWebApplication.php(277): PlacesController->run()
+#6 /Users/wdevil/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController()
+#7 /Users/wdevil/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#8 /Users/wdevil/relax-places/relax/index.php(13): CWebApplication->run()
+REQUEST_URI=/relax/index.php?r=places/addPlace&title=%D0%BD%D0%BE%D0%B2%D0%BE&description=desc&lon=1&lat=2&userId=2
+in /Users/wdevil/relax-places/relax/protected/controllers/PlacesController.php (25)
+in /Users/wdevil/relax-places/relax/index.php (13)
+2011/08/28 14:17:25 [error] [exception.CException] exception 'CException' with message 'Property "Places.db" is not defined.' in /Users/wdevil/relax-places/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/wdevil/relax-places/framework/db/ar/CActiveRecord.php(129): CComponent->__get('db')
+#1 /Users/wdevil/relax-places/relax/protected/models/Places.php(81): CActiveRecord->__get('db')
+#2 /Users/wdevil/relax-places/relax/protected/controllers/PlacesController.php(15): Places->searchNearBy('1', '2', 1000)
+#3 [internal function]: PlacesController->actionSearchNearBy('1', '2', 1000)
+#4 /Users/wdevil/relax-places/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs(Object(PlacesController), Array)
+#5 /Users/wdevil/relax-places/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PlacesController), Object(ReflectionMethod), Array)
+#6 /Users/wdevil/relax-places/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#7 /Users/wdevil/relax-places/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#8 /Users/wdevil/relax-places/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/wdevil/relax-places/framework/web/CWebApplication.php(277): CController->run('searchNearBy')
+#10 /Users/wdevil/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('places/searchNe...')
+#11 /Users/wdevil/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#12 /Users/wdevil/relax-places/relax/index.php(13): CApplication->run()
+#13 {main} REQUEST_URI=/relax/index.php?r=places/searchNearBy&lon=1&lat=2
+2011/08/28 14:17:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'lon) * PI() / 180)) * 180 / PI()) * 60 * 1.1515) AS `distance` FROM `t` HAVING `' at line 1. The SQL statement executed was: SELECT ((ACOS(SIN(2 * PI() / 180) * SIN(lat * PI() / 180) + COS(2 * PI() / 180) * COS(lat * PI() / 180) * COS((1 lon) * PI() / 180)) * 180 / PI()) * 60 * 1.1515) AS `distance` FROM `t` HAVING `distance`<=1000 ORDER BY `distance` ASC.
+in /Users/wdevil/relax-places/relax/protected/models/Places.php (81)
+in /Users/wdevil/relax-places/relax/protected/controllers/PlacesController.php (15)
+in /Users/wdevil/relax-places/relax/index.php (13)
+2011/08/28 14:17:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'lon) * PI() / 180)) * 180 / PI()) * 60 * 1.1515) AS `distance` FROM `t` HAVING `' at line 1. The SQL statement executed was: SELECT ((ACOS(SIN(2 * PI() / 180) * SIN(lat * PI() / 180) + COS(2 * PI() / 180) * COS(lat * PI() / 180) * COS((1 lon) * PI() / 180)) * 180 / PI()) * 60 * 1.1515) AS `distance` FROM `t` HAVING `distance`<=1000 ORDER BY `distance` ASC' in /Users/wdevil/relax-places/framework/db/CDbCommand.php:516
+Stack trace:
+#0 /Users/wdevil/relax-places/framework/db/CDbCommand.php(374): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/wdevil/relax-places/relax/protected/models/Places.php(81): CDbCommand->queryAll()
+#2 /Users/wdevil/relax-places/relax/protected/controllers/PlacesController.php(15): Places->searchNearBy('1', '2', 1000)
+#3 [internal function]: PlacesController->actionSearchNearBy('1', '2', 1000)
+#4 /Users/wdevil/relax-places/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs(Object(PlacesController), Array)
+#5 /Users/wdevil/relax-places/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PlacesController), Object(ReflectionMethod), Array)
+#6 /Users/wdevil/relax-places/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#7 /Users/wdevil/relax-places/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#8 /Users/wdevil/relax-places/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/wdevil/relax-places/framework/web/CWebApplication.php(277): CController->run('searchNearBy')
+#10 /Users/wdevil/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('places/searchNe...')
+#11 /Users/wdevil/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#12 /Users/wdevil/relax-places/relax/index.php(13): CApplication->run()
+#13 {main} REQUEST_URI=/relax/index.php?r=places/searchNearBy&lon=1&lat=2
+2011/08/28 14:18:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'relax-places.t' doesn't exist. The SQL statement executed was: SELECT ((ACOS(SIN(2 * PI() / 180) * SIN(lat * PI() / 180) + COS(2 * PI() / 180) * COS(lat * PI() / 180) * COS((1 - lon) * PI() / 180)) * 180 / PI()) * 60 * 1.1515) AS `distance` FROM `t` HAVING `distance`<=1000 ORDER BY `distance` ASC.
+in /Users/wdevil/relax-places/relax/protected/models/Places.php (81)
+in /Users/wdevil/relax-places/relax/protected/controllers/PlacesController.php (15)
+in /Users/wdevil/relax-places/relax/index.php (13)
+2011/08/28 14:18:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'relax-places.t' doesn't exist. The SQL statement executed was: SELECT ((ACOS(SIN(2 * PI() / 180) * SIN(lat * PI() / 180) + COS(2 * PI() / 180) * COS(lat * PI() / 180) * COS((1 - lon) * PI() / 180)) * 180 / PI()) * 60 * 1.1515) AS `distance` FROM `t` HAVING `distance`<=1000 ORDER BY `distance` ASC' in /Users/wdevil/relax-places/framework/db/CDbCommand.php:516
+Stack trace:
+#0 /Users/wdevil/relax-places/framework/db/CDbCommand.php(374): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/wdevil/relax-places/relax/protected/models/Places.php(81): CDbCommand->queryAll()
+#2 /Users/wdevil/relax-places/relax/protected/controllers/PlacesController.php(15): Places->searchNearBy('1', '2', 1000)
+#3 [internal function]: PlacesController->actionSearchNearBy('1', '2', 1000)
+#4 /Users/wdevil/relax-places/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs(Object(PlacesController), Array)
+#5 /Users/wdevil/relax-places/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PlacesController), Object(ReflectionMethod), Array)
+#6 /Users/wdevil/relax-places/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#7 /Users/wdevil/relax-places/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#8 /Users/wdevil/relax-places/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/wdevil/relax-places/framework/web/CWebApplication.php(277): CController->run('searchNearBy')
+#10 /Users/wdevil/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('places/searchNe...')
+#11 /Users/wdevil/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#12 /Users/wdevil/relax-places/relax/index.php(13): CApplication->run()
+#13 {main} REQUEST_URI=/relax/index.php?r=places/searchNearBy&lon=1&lat=2
