@@ -99,7 +99,6 @@ class Places extends CActiveRecord
             'limit' => $limit,
             'condition' => 'use_id = ' .$userId,
         ));
-        var_dump($this->getDbCriteria());
         return $this;
     }
 
