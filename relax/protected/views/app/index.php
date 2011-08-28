@@ -32,6 +32,12 @@
 		<div class="block">
 			<h2>Self</h2>
 			<div class="block-inner">
+                <?php
+                $myPlaces = $this->widget('CLastPlaces',array(
+                    'lastPlaces' => $lastUserPlaces
+                ));
+                $myPlaces->renderWidget();
+                ?>
 			</div>
 		</div>
 	</div>

@@ -4,14 +4,13 @@ class AppController extends Controller
 {
 	public function actionIndex()
 	{
-
         $lastPlaces = array();
         $lastUserPlaces = array();
 
         $places = $this->getPlacesModel();
         $lastPlaces = $places->last(10)->findAll();
         if(!Yii::app()->user->isGuest) {
-            $lastUserPlaces = $places->my(10, Yii::app()->user->id);
+            $lastUserPlaces = $places->my(Yii::app()->user->id)->findAll();
         }
 		$this->render('index', array('lastPlaces' => $lastPlaces,
                                      'lastUserPlaces' => $lastUserPlaces));

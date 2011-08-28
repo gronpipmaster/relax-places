@@ -97,8 +97,9 @@ class Places extends CActiveRecord
             'select' => '*',
             'order' => 'creat_date DESC',
             'limit' => $limit,
-            'use_id' => $userId,
+            'condition' => 'use_id = ' .$userId,
         ));
+        var_dump($this->getDbCriteria());
         return $this;
     }
 
