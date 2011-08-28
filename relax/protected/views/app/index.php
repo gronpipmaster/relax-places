@@ -28,9 +28,11 @@
                 ?>
 			</div>
 		</div>
+        <?php if(!Yii::app()->user->isGuest) {?>
 		<div class="block">
 			<h2>Self</h2>
 			<div class="block-inner">
 			</div>
 		</div>
+        <?}?>
 </div>
