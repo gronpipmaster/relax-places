@@ -3,14 +3,14 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, abbr, acronym, 
 body{font-family:ubuntu, arial;font-size:14px;height: 100%;}
 a{color:#6d6d6d;}
 a:hover{text-decoration:none;}
-.wrapper{margin:50px;}
+/* .wrapper{margin:50px;} */
 .wrapper .inner{margin:auto;width:1000px;}
 
 .wrapper .inner .container {display: inline-block;padding:10px; background:#E3E2E0; }
 
 
 .wrapper .inner .form{position:relative;float: left;}
-.wrapper .inner .form .result{position: absolute; top: 25px; left: 0; background: white; width: 300px; height: auto; z-index: 2;display:none;padding:0 10px 10px 0;}
+.wrapper .inner .form .result{position: absolute; top: 25px; left: 0; background: white; width: 300px; height: auto; z-index: 2;display:none;padding: 0 10px 10px 5px;box-shadow:3px 3px 15px #6d6d6d;}
 .wrapper .inner .form .result li a{z-index:3;}
 
 
@@ -63,7 +63,7 @@ background: linear-gradient(#ccc, #E3E2E0);
 	box-shadow: 1px 1px 3px #6D6D6D inset,-1px -1px 3px #6D6D6D inset;
 	height: 30px;
 	padding: 0 5px;
-	font-size: 14px;
+	font-size: 14px;margin:0;
 }
 .form textarea{
 	height:100px;margin:3px 0;
