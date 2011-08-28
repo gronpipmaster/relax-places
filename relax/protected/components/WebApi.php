@@ -20,7 +20,7 @@ class WebApi extends CComponent {
         $reqUrl = $this->buildReqUrl($action, $params);
         $this->client->get($reqUrl);
         $response = $this->client->getResponseText();
-        return $response;
+        return json_decode($response);
    }
 
    protected function buildReqUrl($action, array $params) {
