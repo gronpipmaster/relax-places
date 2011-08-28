@@ -15,7 +15,7 @@ class WebApi extends CComponent {
    }
 
    public function getGeom($where) {
-        return json_decode($this->sendRequest('geom', array('q' => $where, 'limit' => 10, 'project' => 1)));
+        return json_decode($this->sendRequest('geom', array('q' => 'Новосибирск, '.$where, 'limit' => 10, 'project' => 1)));
    }
 
    protected function sendRequest($action, array $params) {
