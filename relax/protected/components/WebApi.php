@@ -6,21 +6,21 @@ class WebApi extends CComponent {
    public $apiUrl = '';
    public $version = '';
 
+   protected $client = false;
+
    public function init() {
-
-   }
-
-   public function getFirmsByName($firmName, $where) {
-        return json_decode($this->sendRequest('search', array('what' => $firmName, 'where' => $where)));
+        $this->client = Yii::app()->webBrowser;
    }
 
    public function getGeom($where) {
-        return json_decode($this->sendRequest('geom', array('q' => $where, 'limit' => 10, 'project' => 1)));
+        return $this->sendRequest('geom', array('q' => $where, 'limit' => 10, 'project' => 1));
    }
 
    protected function sendRequest($action, array $params) {
         $reqUrl = $this->buildReqUrl($action, $params);
-        return file_get_contents($reqUrl);
+        $this->client->get($reqUrl);
+        $response = $this->client->getResponseText();
+        return $response;
    }
 
    protected function buildReqUrl($action, array $params) {
