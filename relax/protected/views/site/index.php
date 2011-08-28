@@ -3,13 +3,12 @@
 	<form class="form search" action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="search">
 			<input type="hidden" name="r" value="app/getFilials" />
 			<input type="text" name="what" id="what" />
-
-			
+			<ul class="result">
+			</ul>
 			<input type="submit" value="search" />
 	</form>
 	<div class="map" id="map_canvas"></div>
 	<div class="sidebar">
-		<div id="output"></div>
 		<div class="block">
 			<h2>Timeline</h2>
 			<div class="block-inner">
