@@ -4,7 +4,10 @@ body{font-family:ubuntu, arial;font-size:14px;height: 100%;}
 .wrapper{margin:50px;}
 .wrapper .inner{margin:auto;width:1000px;}
 
-.wrapper .inner .form{float:left;width:100%;}
+.wrapper .inner .form{position:relative;}
+.wrapper .inner .form .result{position: absolute; top: 25px; left: 0; background: white; width: 300px; height: auto; z-index: 2;display:none;padding:0 10px 10px 0;}
+.wrapper .inner .form .result li a{z-index:3;}
+
 
 .wrapper .inner .map{width:650px;height:500px;float:left;}
 
