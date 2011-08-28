@@ -4,6 +4,24 @@ class PlacesController extends Controller
 {
     protected $model = false;
 
+    public function filters()
+    {
+        return array(
+            'accessControl',
+        );
+    } 
+    
+    public function accessRules()
+    {
+        return array(
+            array('allow',
+                'actions' => array('AddPlace'),
+                'users' => array('@'),
+            ),
+        );
+    }
+ 
+
     public function init() {
         $this->model = $this->getPlaceModel();
     }
@@ -29,10 +47,10 @@ class PlacesController extends Controller
         Yii::app()->end();
     }
 
-    public function actionAddPlace($userId, $title, $desc, $lon, $lat) {
+    public function actionAddPlace($title, $desc, $lon, $lat) {
 
         $this->model->title = $title;
-        $this->model->use_id = $userId;
+        $this->model->use_id = Yii::app()->user->id;
         $this->model->desc = $desc;
         $this->model->lat = $lat;
         $this->model->lon = $lon;
@@ -43,6 +61,6 @@ class PlacesController extends Controller
     }
 
     protected function getPlaceModel() {
-        return Places::model();
+        return new Places();
     }
 }
