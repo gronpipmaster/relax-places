@@ -81,6 +81,28 @@ class Places extends CActiveRecord
         return $this->dbConnection->createCommand($sql)->queryAll();
     }
 
+    public function last($limit = 10)
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'select' => '*',
+            'order' => 'creat_date DESC',
+            'limit' => $limit,
+        ));
+        return $this;
+    }
+
+    public function my($userId, $limit = 10)
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'select' => '*',
+            'order' => 'creat_date DESC',
+            'limit' => $limit,
+            'use_id' => $userId,
+        ));
+        return $this;
+    }
+
+
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.

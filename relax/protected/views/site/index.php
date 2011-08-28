@@ -8,12 +8,12 @@
 			</ul>
 			
 	</form>
-	<form class="form searchPlace" action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="searchNearBy">
+	<form class="form searchNearBy" action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="searchNearBy">
 		<input type="hidden" name="r" value="app/searchNearBy" />
 		<input type="hidden" name="lat" value="" />
 		<input type="hidden" name="lon" value="" />
 		<input type="text" name="radius" id="radius" />
-		<input type="submit" value="search" />
+		<input type="submit" value="search" class="submit" />
 	</form>
 	<div class="map" id="map_canvas"></div>
 	<div class="sidebar">

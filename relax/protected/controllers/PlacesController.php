@@ -20,6 +20,7 @@ class PlacesController extends Controller
         Yii::app()->end();
     }
 
+
     public function actionSearchNearBy($lon, $lat, $radius = 1000) {
 
         $res = $this->model->searchNearBy($lon, $lat, $radius);
