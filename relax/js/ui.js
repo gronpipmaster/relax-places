@@ -17,8 +17,8 @@ function clearData(){
 function processClickData(item){
 	
 	item.click(function(){
-		console.log($(this).attr('location'))
-		placeMarker(new GLatLng($(this).attr('location')))
+		console.log($(this))
+		placeMarker(new google.maps.LatLng($(this).attr('lat') , $(this).attr('lon')))
 		$('.result').hide()
 		return false
 	})
@@ -26,7 +26,7 @@ function processClickData(item){
 
 function processJson(data){
 	var response = $(data['result'])
-// 	console.log(data['result'])
+	console.log(data['result'])
 	var container = $('.result')
 	if(response.length > 0){
 		container.show()
@@ -35,7 +35,12 @@ function processJson(data){
 		var name = response[i]['name']
 		var lat = response[i]['lat']
 		var lon = response[i]['lon']
-		container.append('<li><a href="#" location="'+ lat +','+ lon +'">' + name + '</a></li>')
+		var point = response[i]['centroid'].replace('POINT(', '').replace(')', '').split(' ')
+		
+		console.log(point)
+
+		
+		container.append('<li><a href="#" lat="'+ point[1] +'" lon="'+ point[0] +'">' + name + '</a></li>')
 	}
 	processClickData($('.result li a'))
 }
