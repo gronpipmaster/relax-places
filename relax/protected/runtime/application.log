@@ -936,3 +936,67 @@ Stack trace:
 #13 /Users/wdevil/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
 #14 /Users/wdevil/relax-places/relax/index.php(13): CApplication->run()
 #15 {main} REQUEST_URI=/relax/index.php?r=app/index
+2011/08/28 18:37:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "actionRegister".' in /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php:477
+Stack trace:
+#0 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php(262): CController->missingAction('actionRegister')
+#1 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(277): CController->run('actionRegister')
+#2 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('app/actionRegis...')
+#3 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/relax/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/relax/index.php?r=app%2FactionRegister&name=Cafeafrufi&email=kooso%40gmail.com&pass=123123
+2011/08/28 18:38:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "actionRegister".' in /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php:477
+Stack trace:
+#0 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php(262): CController->missingAction('actionRegister')
+#1 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(277): CController->run('actionRegister')
+#2 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('user/actionRegi...')
+#3 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/relax/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/relax/index.php?r=user%2FactionRegister&name=Nyzapoonuch&email=vafaejyloje%40yahoo.com&pass=123123
+2011/08/28 18:40:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "actionRegister".' in /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php:477
+Stack trace:
+#0 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php(262): CController->missingAction('actionRegister')
+#1 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(277): CController->run('actionRegister')
+#2 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('user/actionRegi...')
+#3 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/relax/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/relax/index.php?r=user%2FactionRegister&name=Don&email=cechecaemosea%40yahoo.com&pass=123123
+2011/08/28 18:41:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "actionRegister".' in /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php:477
+Stack trace:
+#0 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php(262): CController->missingAction('actionRegister')
+#1 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(277): CController->run('actionRegister')
+#2 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('user/actionRegi...')
+#3 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/relax/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/relax/index.php?r=user%2FactionRegister&ajax=register-form&name=Risesuc&email=valuwomafri%40gmail.com&pass=123123
+2011/08/28 18:42:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "actionRegister".' in /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php:477
+Stack trace:
+#0 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php(262): CController->missingAction('actionRegister')
+#1 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(277): CController->run('actionRegister')
+#2 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('user/actionRegi...')
+#3 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/relax/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/relax/index.php?r=user%2FactionRegister&ajax=&name=Kilaevoushef&email=bul%40gmail.com&pass=123123
+2011/08/28 18:48:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout"".' in /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php:477
+Stack trace:
+#0 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php(262): CController->missingAction('logout"')
+#1 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(277): CController->run('logout"')
+#2 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('user/logout"')
+#3 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/relax/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/relax/index.php?r=user%2Flogout%22
+2011/08/28 18:50:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout"".' in /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php:477
+Stack trace:
+#0 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php(262): CController->missingAction('logout"')
+#1 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(277): CController->run('logout"')
+#2 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('user/logout"')
+#3 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/relax/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/relax/index.php?r=user%2Flogout%22
+2011/08/28 18:51:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout"".' in /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php:477
+Stack trace:
+#0 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CController.php(262): CController->missingAction('logout"')
+#1 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(277): CController->run('logout"')
+#2 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/web/CWebApplication.php(136): CWebApplication->runController('user/logout"')
+#3 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /home/gron/web/vhost/sub/relax-places/htdocs/relax-places/relax/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/relax/index.php?r=user%2Flogout%22
