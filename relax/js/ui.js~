@@ -40,7 +40,7 @@ function processJson(data){
 		console.log(point)
 
 		
-		container.append('<li><a href="#" lat="'+ point[0] +'" lon="'+ point[1] +'">' + name + '</a></li>')
+		container.append('<li><a href="#" lat="'+ point[1] +'" lon="'+ point[0] +'">' + name + '</a></li>')
 	}
 	processClickData($('.result li a'))
 }

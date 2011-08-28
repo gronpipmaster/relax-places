@@ -3,6 +3,7 @@
 	<form class="form search" action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="search">
 			<input type="hidden" name="r" value="app/getGeom" />
 			<input type="text" name="what" id="what" />
+			<input type="text" name="radius" id="radius" />
 			<ul class="result">
 			</ul>
 			<input type="submit" value="search" />

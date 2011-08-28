@@ -36,10 +36,7 @@ function processJson(data){
 		var lat = response[i]['lat']
 		var lon = response[i]['lon']
 		var point = response[i]['centroid'].replace('POINT(', '').replace(')', '').split(' ')
-		
-		console.log(point)
 
-		
 		container.append('<li><a href="#" lat="'+ point[1] +'" lon="'+ point[0] +'">' + name + '</a></li>')
 	}
 	processClickData($('.result li a'))
