@@ -15,6 +15,7 @@ $(function() {
 // 			beforeSubmit: clearData(),
 			success:   function(data){console.log(data)}
 		})
+		return false
 	})
 })
 
@@ -31,19 +32,19 @@ function tmplFormSend(location){
 // 	lat.val(arr[0])
 // 	long.val(arr[1])
 	$('.map').append(
-		'<form action="'+ baseurl + '/index.php" name="send" id="send">' +
+		'<form action="'+ baseurl + '/index.php" name="send" id="send" class="form">' +
 			'<a href="#">x</a><br>' +
 			'<input type="hidden" name="r" value="places/addPlace"/>' +
 			'<input type="hidden" name="lon" value="'+ arr[0] +'"/>' +
 			'<input type="hidden" name="lat" value="'+ arr[1] +'"/>' +
 			'<input type="hidden" name="use_id" value="1"/>' +
 			'<label><b>Title</b>' +
-				'<input type="text" name="title" class="title"/>' +
+				'<input type="text" name="title" class="title text"/>' +
 			'</label>' +
 			'<label><b>Desc</b>' +
 				'<textarea name="desc" class="desc"></textarea>' +
 			'</label>' +
-			'<input type="submit" value="Send" />' +
+			'<input type="submit" value="Send" class="submit"/>' +
 		'</form>'
 	)
 	$('#send a').click(function(){

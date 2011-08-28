@@ -14,7 +14,7 @@ a:hover{text-decoration:none;}
 .wrapper .inner .form .result li a{z-index:3;}
 
 
-.wrapper .inner .map{width:650px;height:500px;float:left;}
+.wrapper .inner .map{width:650px;height:500px;float:left;margin:10px 0;}
 
 .wrapper .inner .map #send{position:absolute;top:150px;left:150px;width:200px;height:auto;padding:10px 20px;
 box-shadow:3px 3px 15px #6d6d6d;
@@ -35,4 +35,37 @@ background: linear-gradient(#ccc, #E3E2E0);
 .wrapper .inner .block .block-inner{}
 
 
+/* forms */
+
+.form .submit {
+	padding: 0;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: white;
+	border: none;
+	line-height: 30px;
+	height: 30px;
+	padding: 0 10px;
+	background: -moz-linear-gradient(top,#1D1D1D, #393939);
+	background: -o-linear-gradient(top,#1D1D1D, #393939);
+	background: -webkit-gradient(linear, left top, left bottom, from(#1D1D1D), to(#393939));
+	background: linear-gradient(#1D1D1D, #393939);
+	box-shadow: 1px 1px 5px #6D6D6D;
+	cursor:pointer;
+}
+.form textarea,
+.form input.text {
+	border: 0px solid #50606B;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	box-shadow: 1px 1px 3px #6D6D6D inset,-1px -1px 3px #6D6D6D inset;
+	height: 30px;
+	padding: 0 5px;
+	font-size: 14px;margin:0;
+}
+.form textarea{
+	height:100px;margin:3px 0;
+}
 /* ddd */

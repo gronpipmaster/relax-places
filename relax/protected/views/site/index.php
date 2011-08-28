@@ -13,7 +13,7 @@
 		<input type="hidden" name="lat" value="" />
 		<input type="hidden" name="lon" value="" />
 		<input type="text" name="radius" id="radius" />
-		<input type="submit" value="search" />
+		<input type="submit" value="search" class="submit" />
 	</form>
 	<div class="map" id="map_canvas"></div>
 	<div class="sidebar">

@@ -3,7 +3,7 @@
 
 	<form class="form search" action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="search">
 			<input type="hidden" name="r" value="app/getGeom" />
-			<input type="text" name="what" id="what" />
+			<input type="text" name="what" id="what" class="text" />
 			<ul class="result">
 			</ul>
 
@@ -12,8 +12,8 @@
 		<input type="hidden" name="r" value="app/searchNearBy" />
 		<input type="hidden" name="lat" value="" />
 		<input type="hidden" name="lon" value="" />
-		<input type="text" name="radius" id="radius" />
-		<input type="submit" value="search" />
+		<input type="text" name="radius" id="radius" class="text" />
+		<input type="submit" value="Search" class="submit" />
 	</form>
 	<div class="map" id="map_canvas"></div>
 	<div class="sidebar">
