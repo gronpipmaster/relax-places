@@ -20,9 +20,11 @@ function tmplFormSend(location){
 // 	long.val(arr[1])
 	$('.map').append(
 		'<form action="'+ baseurl + '/index.php" name="send" id="send">' +
+			'<a href="#">x</a><br>' +
 			'<input type="hidden" name="r" value="places/addPlace"/>' +
 			'<input type="hidden" name="lon" value="'+ arr[0] +'"/>' +
 			'<input type="hidden" name="lat" value="'+ arr[1] +'"/>' +
+			'<input type="hidden" name="use_id" value="1"/>' +
 			'<label><b>Title</b>' +
 				'<input type="text" name="title" class="title"/>' +
 			'</label>' +
@@ -32,9 +34,13 @@ function tmplFormSend(location){
 			'<input type="submit" value="Send" />' +
 		'</form>'
 	)
+	$('#send a').click(function(){
+		dethFormSend()
+		return false
+	})
 }
 
-function dethForm(){
+function dethFormSend(){
 	$('#send').remove()
 }
 

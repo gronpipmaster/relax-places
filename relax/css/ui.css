@@ -11,7 +11,7 @@ body{font-family:ubuntu, arial;font-size:14px;height: 100%;}
 
 .wrapper .inner .map{width:650px;height:500px;float:left;}
 
-.wrapper .inner .map #send{position:absolute;top:100px;left:100px;width:300px;height:auto;background:#fff;}
+.wrapper .inner .map #send{position:absolute;top:150px;left:150px;width:200px;height:auto;background:#fff;}
 
 .wrapper .inner .sidebar{float:right;width:300px;}
 
