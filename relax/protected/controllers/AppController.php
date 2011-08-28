@@ -4,6 +4,7 @@ class AppController extends Controller
 {
 	public function actionIndex()
 	{
+
         $lastPlaces = array();
         $lastUserPlaces = array();
 

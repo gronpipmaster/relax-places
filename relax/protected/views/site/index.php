@@ -1,4 +1,4 @@
-<?php $this->pageTitle=Yii::app()->name; ?>
+<?php $this->pageTitle=Yii::app()->name;  ?>
 <h1><?php echo CHtml::encode(Yii::app()->name); ?></h1>
 	
 	<form class="form search" action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="search">
