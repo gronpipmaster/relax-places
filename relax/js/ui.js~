@@ -10,6 +10,10 @@ $(function() {
 	})
 })
 
+function actionSend(){
+	
+}
+
 function tmplFormSend(location){
 
 	arr = $.map(location, function (data) {
@@ -20,21 +24,27 @@ function tmplFormSend(location){
 // 	long.val(arr[1])
 	$('.map').append(
 		'<form action="'+ baseurl + '/index.php" name="send" id="send">' +
+			'<a href="#">x</a><br>' +
 			'<input type="hidden" name="r" value="places/addPlace"/>' +
 			'<input type="hidden" name="lon" value="'+ arr[0] +'"/>' +
 			'<input type="hidden" name="lat" value="'+ arr[1] +'"/>' +
+			'<input type="hidden" name="use_id" value="1"/>' +
 			'<label><b>Title</b>' +
 				'<input type="text" name="title" class="title"/>' +
 			'</label>' +
 			'<label><b>Desc</b>' +
 				'<textarea name="desc" class="desc"></textarea>' +
 			'</label>' +
-			'<input type="submit" value="Send" />'
+			'<input type="submit" value="Send" />' +
 		'</form>'
 	)
+	$('#send a').click(function(){
+		dethFormSend()
+		return false
+	})
 }
 
-function dethForm(){
+function dethFormSend(){
 	$('#send').remove()
 }
 
@@ -49,7 +59,11 @@ function processClickData(item){
 	item.click(function(){
 		console.log($(this))
 // 		placeMarker()
-		map.setCenter(new google.maps.LatLng($(this).attr('lon') , $(this).attr('lat')), 3);
+		var lat = $(this).attr('lat')
+		var lon = $(this).attr('lon')
+		map.setCenter(new google.maps.LatLng(lon , lat), 3);
+		$('#search input[name="lat"]').val(lat)
+		$('#search input[name="lon"]').val(lon)
 		$('.result').hide()
 		return false
 	})
@@ -74,27 +88,16 @@ function processJson(data){
 }
 
 function autoComplit(){
-// 	$('#search')
+
 	var form = $('#search')
 	var what = $('#what')
 
-
-// 	form.submit(function(){
-// 		clearData()
-// 		return true
-// 		
-// 	})
 	what.keypress(function(event){
 		var value = $(this).val()
 		console.log(event)
 		if(value.length > 2){
 			console.log(value)
 			form.ajaxSubmit({
-// 				target:        '#output',
-				// dataType identifies the expected content type of the server response
-// 				dataType:  'json',
-				// success identifies the function to invoke when the server response
-				// has been received
 				beforeSubmit: clearData(),
 				success:   processJson
 			}) 
