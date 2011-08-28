@@ -8,6 +8,15 @@ $(function() {
 		clearData()
 		return false
 	})
+
+	$('#searchNearBy').submit(function(){
+// 		.ajaxSubmit()
+		$(this).ajaxSubmit({
+// 			beforeSubmit: clearData(),
+			success:   function(data){console.log(data)}
+		})
+		return false
+	})
 })
 
 function actionSend(){

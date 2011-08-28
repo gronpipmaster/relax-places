@@ -1,8 +1,13 @@
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, a, abbr, acronym, cite, img, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{border:0 none;margin:0;padding:0;line-height:135%} th, td{text-align:left;vertical-align:top} * a{cursor:pointer} a img, *:link img, *:visited img{border:0 none} h1, h2, h3, h4, h5, h6{font-weight:normal} ul{list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding:0} table{border-collapse:collapse;border-spacing:0;border:0 none} blockquote:before, blockquote:after{content:""}
 
 body{font-family:ubuntu, arial;font-size:14px;height: 100%;}
+a{color:#6d6d6d;}
+a:hover{text-decoration:none;}
 .wrapper{margin:50px;}
 .wrapper .inner{margin:auto;width:1000px;}
+
+.wrapper .inner .container {display: inline-block;padding:10px; background:#E3E2E0; }
+
 
 .wrapper .inner .form{position:relative;float: left;}
 .wrapper .inner .form .result{position: absolute; top: 25px; left: 0; background: white; width: 300px; height: auto; z-index: 2;display:none;padding:0 10px 10px 0;}
@@ -11,7 +16,17 @@ body{font-family:ubuntu, arial;font-size:14px;height: 100%;}
 
 .wrapper .inner .map{width:650px;height:500px;float:left;}
 
-.wrapper .inner .map #send{position:absolute;top:150px;left:150px;width:200px;height:auto;background:#fff;}
+.wrapper .inner .map #send{position:absolute;top:150px;left:150px;width:200px;height:auto;padding:10px 20px;
+box-shadow:3px 3px 15px #6d6d6d;
+border-radius: 23px;
+-webkit-border-radius: 23px;
+-moz-border-radius:23px;
+background: -moz-linear-gradient(top,#ccc, #E3E2E0);
+background: -o-linear-gradient(top,#ccc, #E3E2E0);
+background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#E3E2E0));
+background: linear-gradient(#ccc, #E3E2E0);
+-pie-background: linear-gradient(#ccc, #E3E2E0);
+}
 
 .wrapper .inner .sidebar{float:right;width:300px;}
 
