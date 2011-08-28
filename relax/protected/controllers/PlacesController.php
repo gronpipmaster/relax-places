@@ -14,18 +14,16 @@ class PlacesController extends Controller
     public function actionSearchNearBy($lon, $lat, $radius = 1000) {
 
         $res = $this->model->searchNearBy($lon, $lat, $radius);
-        var_dump($res);
     }
 
-    public function actionAddPlace($userId, $title, $description, $lon, $lat) {
+    public function actionAddPlace($userId, $title, $desc, $lon, $lat) {
 
         $this->model->title = $title;
         $this->model->use_id = $userId;
-        $this->model->desc = $description;
+        $this->model->desc = $desc;
         $this->model->lat = $lat;
         $this->model->lon = $lon;
-        $this->model->creat_date = date('YYYY-MM-DD HH:MM:SS',time());
-
+        $this->model->creat_date = date('Y-M-D H:m:s',time());
         if($this->model->validate()) {
             $this->model->save();
         }
