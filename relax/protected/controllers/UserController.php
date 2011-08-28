@@ -31,6 +31,11 @@ class UserController extends Controller
         }
     }
 
+    public function actionLogout($name, $pass)
+    {
+           Yii::app()->user->logout();
+    }
+    
     public function actionRegister($name, $pass, $email)
     {
         //$model=new users;
