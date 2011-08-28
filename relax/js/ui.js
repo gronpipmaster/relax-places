@@ -21,13 +21,23 @@ function tmplFormSend(location){
 	$('.map').append(
 		'<form action="'+ baseurl + '/index.php" name="send" id="send">' +
 			'<input type="hidden" name="r" value="places/addPlace"/>' +
-			'<input type="hidden" name="lon" value="'+ data.attr(arr[0]) +'"/>' +
-			'<input type="hidden" name="lat" value="'+ data.attr(arr[1]) +'"/>' +
-			'<input type="text" name="title" class="title"/>' +
-			'<textarea name="desc" class="desc"></textarea>' +
+			'<input type="hidden" name="lon" value="'+ arr[0] +'"/>' +
+			'<input type="hidden" name="lat" value="'+ arr[1] +'"/>' +
+			'<label><b>Title</b>' +
+				'<input type="text" name="title" class="title"/>' +
+			'</label>' +
+			'<label><b>Desc</b>' +
+				'<textarea name="desc" class="desc"></textarea>' +
+			'</label>' +
+			'<input type="submit" value="Send" />' +
 		'</form>'
 	)
 }
+
+function dethForm(){
+	$('#send').remove()
+}
+
 
 function clearData(){
 	$('.result li').remove()
@@ -77,7 +87,7 @@ function autoComplit(){
 	what.keypress(function(event){
 		var value = $(this).val()
 		console.log(event)
-		if(value.length > 3){
+		if(value.length > 2){
 			console.log(value)
 			form.ajaxSubmit({
 // 				target:        '#output',
@@ -118,6 +128,7 @@ function placeMarker(location) {
 		position: location,
 		map: map
 	})
+	tmplFormSend(location)
 	
 }
 
