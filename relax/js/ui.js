@@ -42,7 +42,6 @@ function tmplFormSend(location){
 			'<input type="hidden" name="r" value="places/addPlace"/>' +
 			'<input type="hidden" name="lon" value="'+ arr[0] +'"/>' +
 			'<input type="hidden" name="lat" value="'+ arr[1] +'"/>' +
-			'<input type="hidden" name="use_id" value="1"/>' +
 // 			'<label><b>Title</b>' +
 				'<input type="text" name="title" class="title text"/>' +
 // 			'</label>' +
@@ -78,7 +77,7 @@ function processClickData(item){
 		var lat = $(this).attr('lat')
 		var lon = $(this).attr('lon')
 		map.setCenter(new google.maps.LatLng(lon , lat), 3);        
-		map.setZoom(15);        
+		map.setZoom(17)
 		$('#searchNearBy input[name="lat"]').val(lat)
 		$('#searchNearBy input[name="lon"]').val(lon)
 		$('.result').hide()
