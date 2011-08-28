@@ -20,6 +20,12 @@
 		<div class="block">
 			<h2>Timeline</h2>
 			<div class="block-inner">
+                <?php
+                $lastPlaces = $this->widget('CLastPlaces',array(
+                    'lastPlaces' => $lastPlaces
+                ));
+                $lastPlaces->renderWidget();
+                ?>
 			</div>
 		</div>
 		<div class="block">

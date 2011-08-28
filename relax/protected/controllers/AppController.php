@@ -4,7 +4,16 @@ class AppController extends Controller
 {
 	public function actionIndex()
 	{
-		$this->render('index');
+        $lastPlaces = array();
+        $lastUserPlaces = array();
+
+        $places = $this->getPlacesModel();
+        $lastPlaces = $places->last(10)->findAll();
+        if(!Yii::app()->user->isGuest) {
+            $lastUserPlaces = $places->my(10, Yii::app()->user->id);
+        }
+		$this->render('index', array('lastPlaces' => $lastPlaces,
+                                     'lastUserPlaces' => $lastUserPlaces));
 	}
 
 
@@ -14,6 +23,10 @@ class AppController extends Controller
         header('Content-type: application/json');
         echo CJavaScript::jsonEncode($filials);
         Yii::app()->end();
+    }
+
+    protected function getPlacesModel() {
+        return Places::model();
     }
     
 }
