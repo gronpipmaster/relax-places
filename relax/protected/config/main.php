@@ -69,6 +69,10 @@ return array(
             'apiKey' => 'rufjco2083',
             'version' => '1.3'
         ),
+        'webBrowser' => array(
+            'class' => 'extensions.WebBrowser.CWebBrowser',
+            'adapter' => 'curl'
+        ),
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
