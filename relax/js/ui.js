@@ -49,16 +49,16 @@ function autoComplit(){
 	var what = $('#what')
 
 
-	form.submit(function(){
-		clearData()
-		return true
-		
-	})
+// 	form.submit(function(){
+// 		clearData()
+// 		return true
+// 		
+// 	})
 	what.keypress(function(){
 		var value = $(this).val()
-		if(value.length > 2){
+		if(value.length > 3){
 			console.log(value)
-			form.ajaxForm({
+			form.ajaxSubmit({
 // 				target:        '#output',
 				// dataType identifies the expected content type of the server response
 // 				dataType:  'json',
