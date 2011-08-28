@@ -17,6 +17,8 @@ class UserController extends Controller
         switch ($identity->errorCode) {
             case UserIdentity::ERROR_NONE:
                 Yii::app()->user->login($identity, 3600*24*7);
+                Yii::app()->request->cookies['id'] = new CHttpCookie('id', Yii::app()->user->getId());
+                Yii::app()->request->cookies['name'] = new CHttpCookie('name', Yii::app()->user->getName());
                 echo 'login: ' . $identity->getId();
                 break;
             case UserIdentity::ERROR_USERNAME_INVALID:
@@ -33,6 +35,8 @@ class UserController extends Controller
 
     public function actionLogout()
     {
+           unset(Yii::app()->request->cookies['id']);
+           unset(Yii::app()->request->cookies['name']);
            Yii::app()->user->logout();
     }
     

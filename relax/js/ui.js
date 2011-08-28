@@ -4,6 +4,7 @@ $(function() {
 	loadScript()
 	autoComplit()
 
+	
 	$('.sidebar').click(function(){
 		clearData()
 		return false
@@ -17,9 +18,38 @@ $(function() {
 		})
 		return false
 	})
+	$('#register').submit(function(){
+		$(this).ajaxSubmit({
+			// 			beforeSubmit: clearData(),
+			success:   function(data){console.log(data)}
+		})
+		return false
+	})
+	$('#login').submit(function(){
+		$(this).ajaxSubmit({
+			// 			beforeSubmit: clearData(),
+			success:   function(data){console.log(data)}
+		})
+		return false
+	})
+	$('#logout').submit(function(){
+		$(this).ajaxSubmit({
+			// 			beforeSubmit: clearData(),
+			success:   function(data){console.log(data)}
+		})
+		return false
+	})
 	actionFocusFields()
+	userActions()
 	
 })
+
+function userActions(){
+	var cooc = $.cookie('id')
+// 	if(cooc.length > 0){
+		console.log(cooc)
+// 	}
+}
 
 function actionFocusFields(){
 
