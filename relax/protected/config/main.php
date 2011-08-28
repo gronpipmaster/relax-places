@@ -70,7 +70,7 @@ return array(
             'version' => '1.3'
         ),
         'webBrowser' => array(
-            'class' => 'extensions.WebBrowser.CWebBrowser',
+            'class' => 'application.extensions.WebBrowser.CWebBrowser',
             'adapter' => 'curl'
         ),
 		'log'=>array(
