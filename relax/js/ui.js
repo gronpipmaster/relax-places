@@ -12,6 +12,7 @@ $(function() {
 
 function clearData(){
 	$('.result li').remove()
+	$('.result').hide()
 }
 
 function processClickData(item){
@@ -33,8 +34,8 @@ function processJson(data){
 	}
 	for(var i=0;i<response.length;i++){
 		var name = response[i]['name']
-		var lat = response[i]['lat']
-		var lon = response[i]['lon']
+// 		var lat = response[i]['lat']
+// 		var lon = response[i]['lon']
 		var point = response[i]['centroid'].replace('POINT(', '').replace(')', '').split(' ')
 
 		container.append('<li><a href="#" lat="'+ point[1] +'" lon="'+ point[0] +'">' + name + '</a></li>')
@@ -48,7 +49,11 @@ function autoComplit(){
 	var what = $('#what')
 
 
-// 	form.submit(function(){return false})
+	form.submit(function(){
+		clearData()
+		return true
+		
+	})
 	what.keypress(function(){
 		var value = $(this).val()
 		if(value.length > 2){
