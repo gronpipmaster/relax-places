@@ -4,39 +4,48 @@ $(function() {
 	loadScript()
 	autoComplit()
 
-	
-	$('.sidebar').click(function(){
-		clearData()
-		return false
-	})
 
 	$('#searchNearBy').submit(function(){
-// 		.ajaxSubmit()
+
 		$(this).ajaxSubmit({
-// 			beforeSubmit: clearData(),
+
 			success:   function(data){console.log(data)}
 		})
 		return false
 	})
 	$('#register').submit(function(){
 		$(this).ajaxSubmit({
-			// 			beforeSubmit: clearData(),
-			success:   function(data){console.log(data)}
+// 			beforeSubmit: userActions(),
+			success:   function(data){
+				console.log(data)
+				userActions()
+			}
 		})
+		
 		return false
 	})
 	$('#login').submit(function(){
 		$(this).ajaxSubmit({
-			// 			beforeSubmit: clearData(),
-			success:   function(data){console.log(data)}
+// 			beforeSubmit: ,
+			success:   function(data){
+				console.log(data)
+				userActions()
+				
+			}
 		})
+// 		userActions()
 		return false
 	})
 	$('#logout').submit(function(){
 		$(this).ajaxSubmit({
-			// 			beforeSubmit: clearData(),
-			success:   function(data){console.log(data)}
+// 			beforeSubmit: userActions(),
+			success:   function(data){
+				console.log(data)
+				userActions()
+				
+			}
 		})
+// 		userActions()
 		return false
 	})
 	actionFocusFields()
@@ -46,9 +55,27 @@ $(function() {
 
 function userActions(){
 	var cooc = $.cookie('id')
-// 	if(cooc.length > 0){
+
+	$('.reg').click(function(){
+		$('#login').hide()
+		$('#register').show()
+		return false
+	})
+	$('.return').click(function(){
+		$('#login').show()
+		$('#register').hide()
+		return false
+	})
+	if(cooc){
 		console.log(cooc)
-// 	}
+		$('#register').hide()
+		$('#login').hide()
+		$('#logout').show()
+	} else {
+		$('#logout').hide()
+		$('#login').show()
+	}
+		
 }
 
 function actionFocusFields(){

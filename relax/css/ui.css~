@@ -63,9 +63,12 @@ background: linear-gradient(#ccc, #E3E2E0);
 	box-shadow: 1px 1px 3px #6D6D6D inset,-1px -1px 3px #6D6D6D inset;
 	height: 30px;
 	padding: 0 5px;
-	font-size: 14px;margin:0;
+	font-size: 14px;margin:0;font-family:ubuntu;
 }
 .form textarea{
 	height:100px;margin:3px 0;
 }
+
+
+
 /* ddd */
