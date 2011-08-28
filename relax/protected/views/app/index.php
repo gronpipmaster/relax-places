@@ -23,6 +23,7 @@
 			<input type="text" name="name" class="text" />
 			<input type="password" name="pass" class="text" />
 			<input type="submit" value="Login" class="submit" />
+			<a href="#" class="reg">Registration</a>
 		</form>
 		<form action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="logout" class="form">
 			<input type="hidden" name="r" value="user/logout" />
@@ -31,6 +32,7 @@
 		<form action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="register" class="form">
 			<input type="hidden" name="r" value="user/register" />
 			<input type="hidden" name="ajax" value="register-form" />
+			<a href="#" class="return">Return login</a><br>
 			<input type="text" name="name" class="text" />
 			<input type="text" name="email" class="text" />
 			<input type="password" name="pass" class="text" />
