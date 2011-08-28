@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser/sfWebBrowserPlugin
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser/sfWebBrowserPlugin/LICENSE
+END
+package.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser/sfWebBrowserPlugin/package.xml
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser/sfWebBrowserPlugin/README
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser/sfWebBrowserPlugin/lib
+END
+sfSocketsAdapter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser/sfWebBrowserPlugin/lib/sfSocketsAdapter.class.php
+END
+sfWebBrowser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser/sfWebBrowserPlugin/lib/sfWebBrowser.class.php
+END
+sfCurlAdapter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser/sfWebBrowserPlugin/lib/sfCurlAdapter.class.php
+END
+sfWebBrowserInvalidResponseException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser/sfWebBrowserPlugin/lib/sfWebBrowserInvalidResponseException.class.php
+END
+sfFopenAdapter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser/sfWebBrowserPlugin/lib/sfFopenAdapter.class.php
+END
