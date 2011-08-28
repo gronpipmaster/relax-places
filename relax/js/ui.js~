@@ -3,6 +3,8 @@ $(function() {
 	var geocoder
 	loadScript()
 	autoComplit()
+
+// 	$('')
 })
 
 function clearData(){
@@ -52,6 +54,7 @@ function autoComplit(){
 // 				dataType:  'json',
 				// success identifies the function to invoke when the server response
 				// has been received
+				beforeSubmit: clearData(),
 				success:   processJson
 			}) 
 		}

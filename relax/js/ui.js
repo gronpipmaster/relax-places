@@ -3,6 +3,11 @@ $(function() {
 	var geocoder
 	loadScript()
 	autoComplit()
+
+	$('.sidebar').click(function(){
+		clearData()
+		return false
+	})
 })
 
 function clearData(){
