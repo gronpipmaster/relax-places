@@ -3,13 +3,18 @@ $(function() {
 	var geocoder
 	loadScript()
 	autoComplit()
-	processClickData()
-
 })
+
+function clearData(){
+	$('.result li').remove()
+}
+
+function processClickData(item){
 	
-function processClickData(){
-	$('.result li a').click(function(){
-		console.log($(this))
+	item.click(function(){
+		console.log($(this).attr('location'))
+		placeMarker(new GLatLng($(this).attr('location')))
+		$('.result').hide()
 		return false
 	})
 }
@@ -27,7 +32,7 @@ function processJson(data){
 		var lon = response[i]['lon']
 		container.append('<li><a href="#" location="'+ lat +','+ lon +'">' + name + '</a></li>')
 	}
-	
+	processClickData($('.result li a'))
 }
 
 function autoComplit(){
@@ -47,6 +52,7 @@ function autoComplit(){
 // 				dataType:  'json',
 				// success identifies the function to invoke when the server response
 				// has been received
+				beforeSubmit: clearData(),
 				success:   processJson
 			}) 
 		}
