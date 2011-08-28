@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser
+END
+sfException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser/sfException.class.php
+END
+CWebBrowser.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/core/!svn/ver/320/trunk/shared/yii/extensions/WebBrowser/CWebBrowser.php
+END
