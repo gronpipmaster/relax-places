@@ -58,6 +58,7 @@ class PlacesController extends Controller
         if($this->model->validate()) {
             $this->model->save();
         }
+        Yii::app()->redirect(Yii::app()->request->baseUrl. '/?r=app/index');
     }
 
     protected function getPlaceModel() {
