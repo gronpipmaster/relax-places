@@ -3,11 +3,31 @@ $(function() {
 	var geocoder
 	loadScript()
 	autoComplit()
-	
+	processClickData()
+
 })
+	
+function processClickData(){
+	$('.result li a').click(function(){
+		console.log($(this))
+		return false
+	})
+}
 
 function processJson(data){
-	console.log(data)
+	var response = $(data['result'])
+// 	console.log(data['result'])
+	var container = $('.result')
+	if(response.length > 0){
+		container.show()
+	}
+	for(var i=0;i<response.length;i++){
+		var name = response[i]['name']
+		var lat = response[i]['lat']
+		var lon = response[i]['lon']
+		container.append('<li><a href="#" location="'+ lat +','+ lon +'">' + name + '</a></li>')
+	}
+	
 }
 
 function autoComplit(){
@@ -54,11 +74,12 @@ function initialize() {
 }
 
 function placeMarker(location) {
+	console.log(location)
 	var marker = new google.maps.Marker({
 		position: location,
 		map: map
 	})
-	// 	console.log('1')
+	map.setCenter(location, 10);
 }
 
 function latLngInputAdd(location){
