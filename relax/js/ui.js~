@@ -24,9 +24,10 @@ $(function() {
 function actionFocusFields(){
 
 	var form = $('.form')
-	var what = new MagicField( form.find( 'input[name="what"]' )[0], 'Где' ),
-		radius = new MagicField( form.find( 'input[name="radius"]' )[0], 'Радиус' ),
-		name = new MagicField( form.find( 'input[name="title"]' )[0], 'Название' )
+	var what = new FocusFielsd( form.find( 'input[name="what"]' )[0], 'Где' ),
+	radius = new FocusFielsd( form.find( 'input[name="radius"]' )[0], 'Радиус' ),
+	name = new FocusFielsd( form.find( 'input[name="title"]' )[0], 'Название' ),
+	textarea = new FocusFielsd( form.find( 'textarea[name="desc"]' )[0], 'Коментарий' )
 // 	}
 }
 

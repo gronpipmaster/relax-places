@@ -26,7 +26,8 @@ function actionFocusFields(){
 	var form = $('.form')
 	var what = new FocusFielsd( form.find( 'input[name="what"]' )[0], 'Где' ),
 	radius = new FocusFielsd( form.find( 'input[name="radius"]' )[0], 'Радиус' ),
-	name = new FocusFielsd( form.find( 'input[name="title"]' )[0], 'Название' )
+	name = new FocusFielsd( form.find( 'input[name="title"]' )[0], 'Название' ),
+	textarea = new FocusFielsd( form.find( '.desc' )[0], 'Коментарий' )
 // 	}
 }
 
