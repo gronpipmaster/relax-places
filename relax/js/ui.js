@@ -77,7 +77,8 @@ function processClickData(item){
 // 		placeMarker()
 		var lat = $(this).attr('lat')
 		var lon = $(this).attr('lon')
-		map.setCenter(new google.maps.LatLng(lon , lat), 3);
+		map.setCenter(new google.maps.LatLng(lon , lat), 3);        
+		map.setZoom(15);        
 		$('#searchNearBy input[name="lat"]').val(lat)
 		$('#searchNearBy input[name="lon"]').val(lon)
 		$('.result').hide()
