@@ -20,12 +20,6 @@
 		<div class="block">
 			<h2>Timeline</h2>
 			<div class="block-inner">
-                <?php
-                $lastPlaces = $this->widget('CLastPlaces',array(
-                    'lastPlaces' => $lastPlaces
-                ));
-                $lastPlaces->renderWidget();
-                ?>
 			</div>
 		</div>
 		<div class="block">
@@ -33,8 +27,4 @@
 			<div class="block-inner">
 			</div>
 		</div>
-<<<<<<< HEAD
-	</div>
-=======
 </div>
->>>>>>> 048069b577068eaef54216f1a026dd4ee227e7af
