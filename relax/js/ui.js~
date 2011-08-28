@@ -3,11 +3,36 @@ $(function() {
 	var geocoder
 	loadScript()
 	autoComplit()
-	
 })
 
+function clearData(){
+	$('.result li').remove()
+}
+
+function processClickData(item){
+	
+	item.click(function(){
+		console.log($(this).attr('location'))
+		placeMarker(new GLatLng($(this).attr('location')))
+		$('.result').hide()
+		return false
+	})
+}
+
 function processJson(data){
-	console.log(data)
+	var response = $(data['result'])
+// 	console.log(data['result'])
+	var container = $('.result')
+	if(response.length > 0){
+		container.show()
+	}
+	for(var i=0;i<response.length;i++){
+		var name = response[i]['name']
+		var lat = response[i]['lat']
+		var lon = response[i]['lon']
+		container.append('<li><a href="#" location="'+ lat +','+ lon +'">' + name + '</a></li>')
+	}
+	processClickData($('.result li a'))
 }
 
 function autoComplit(){
@@ -22,7 +47,7 @@ function autoComplit(){
 		if(value.length > 2){
 			console.log(value)
 			form.ajaxForm({
-				target:        '#output',
+// 				target:        '#output',
 				// dataType identifies the expected content type of the server response
 // 				dataType:  'json',
 				// success identifies the function to invoke when the server response
@@ -54,11 +79,12 @@ function initialize() {
 }
 
 function placeMarker(location) {
+	console.log(location)
 	var marker = new google.maps.Marker({
 		position: location,
 		map: map
 	})
-	// 	console.log('1')
+	map.setCenter(location, 10);
 }
 
 function latLngInputAdd(location){
