@@ -5,6 +5,9 @@
 	<meta name="language" content="en" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ui.css" />
 
+	<script type="text/javascript" >
+		var baseurl = '<?php echo Yii::app()->request->baseUrl; ?>'
+	</script>
 	<script type="text/javascript" src="http://yandex.st/jquery/1.6.2/jquery.min.js" charset="utf-8"></script>
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.form.js" charset="utf-8"></script>
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/ui.js" charset="utf-8"></script>

@@ -53,7 +53,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=192.168.2.2;dbname=relax-places' ,
+			'connectionString' => 'mysql:host=gronpipmaster.ru;dbname=relax-places' ,
 			'emulatePrepare' => true,
 			'username' => 'relax-places',
 			'password' => 'relax-places',
