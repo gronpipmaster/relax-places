@@ -7,13 +7,25 @@ class PlacesController extends Controller
     public function init() {
         $this->model = $this->getPlaceModel();
     }
+    
     public function actionGetPlaces() {
         $models = $this->model->findAll();
+        $arr = array();
+        foreach($models as $model)
+        {
+            $arr[$model->id] = $model->attributes;
+        }
+        header('Content-type: application/json');
+        echo CJavaScript::jsonEncode($arr);
+        Yii::app()->end();
     }
 
     public function actionSearchNearBy($lon, $lat, $radius = 1000) {
 
         $res = $this->model->searchNearBy($lon, $lat, $radius);
+        header('Content-type: application/json');
+        echo CJavaScript::jsonEncode($res);
+        Yii::app()->end();
     }
 
     public function actionAddPlace($userId, $title, $desc, $lon, $lat) {
