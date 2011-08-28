@@ -34,12 +34,6 @@
 			<div class="block-inner">
 			</div>
 		</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 	</div>
-=======
-=======
-        <?}?>
->>>>>>> 4d90b0df760b1ec2fa672d719cf64943d5c0bd7e
+        <?php }?>
 </div>
->>>>>>> 048069b577068eaef54216f1a026dd4ee227e7af
