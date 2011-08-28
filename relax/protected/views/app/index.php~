@@ -15,6 +15,26 @@
 		<input type="text" name="radius" id="radius" class="text" />
 		<input type="submit" value="Search" class="submit" />
 	</form>
+	<div class="logins">
+		<form action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="actionLogin" class="form">
+			<input type="hidden" name="r" value="app/actionLogin" />
+			<input type="text" name="name" class="text" />
+			<input type="password" name="pass" class="text" />
+			<input type="submit" value="Login" class="submit" />
+		</form>
+		<form action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="actionLogout" class="form">
+			<input type="hidden" name="r" value="app/actionLogout" />
+			<input type="submit" value="Logout" class="submit" />
+		</form>
+		<form action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="actionRegister" class="form">
+			<input type="hidden" name="r" value="app/actionRegister" />
+			<input type="text" name="name" class="text" />
+			<input type="text" name="email" class="text" />
+			<input type="password" name="pass" class="text" />
+			
+			<input type="submit" value="Registr" />
+		</form>
+	</div>
 	<div class="map" id="map_canvas"></div>
 	<div class="sidebar">
 		<div class="block">
@@ -32,14 +52,14 @@
 		<div class="block">
 			<h2>Self</h2>
 			<div class="block-inner">
+                <?php
+                $myPlaces = $this->widget('CLastPlaces',array(
+                    'lastPlaces' => $lastUserPlaces
+                ));
+                $myPlaces->renderWidget();
+                ?>
 			</div>
 		</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 	</div>
-=======
-=======
-        <?}?>
->>>>>>> 4d90b0df760b1ec2fa672d719cf64943d5c0bd7e
+        <?php }?>
 </div>
->>>>>>> 048069b577068eaef54216f1a026dd4ee227e7af

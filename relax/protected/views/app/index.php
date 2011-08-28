@@ -15,6 +15,26 @@
 		<input type="text" name="radius" id="radius" class="text" />
 		<input type="submit" value="Search" class="submit" />
 	</form>
+	<div class="logins">
+		<form action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="actionLogin" class="form">
+			<input type="hidden" name="r" value="app/actionLogin" />
+			<input type="text" name="name" class="text" />
+			<input type="password" name="pass" class="text" />
+			<input type="submit" value="Login" class="submit" />
+		</form>
+		<form action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="actionLogout" class="form">
+			<input type="hidden" name="r" value="app/actionLogout" />
+			<input type="submit" value="Logout" class="submit" />
+		</form>
+		<form action="<?php echo Yii::app()->request->baseUrl; ?>/index.php" id="actionRegister" class="form">
+			<input type="hidden" name="r" value="app/actionRegister" />
+			<input type="text" name="name" class="text" />
+			<input type="text" name="email" class="text" />
+			<input type="password" name="pass" class="text" />
+			
+			<input type="submit" value="Registr" class="submit" />
+		</form>
+	</div>
 	<div class="map" id="map_canvas"></div>
 	<div class="sidebar">
 		<div class="block">
